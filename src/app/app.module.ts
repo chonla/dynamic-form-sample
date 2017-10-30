@@ -8,11 +8,13 @@ import { CsaComponent }                 from './csa.component';
 import { ViewFormComponent }                 from './view-form.component';
 import { DynamicFormComponent }         from './dynamic-form.component';
 import { DynamicFormQuestionComponent } from './dynamic-form-question.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: 'view',

@@ -65,4 +65,12 @@ export class QuestionService {
 
     return questions.sort((a, b) => a.order - b.order);
   }
+
+  getQuestionsWithData(data: any) {
+    var questions = this.getQuestions()
+    questions.map(question => {
+      question.value = data[question.key];
+    })
+    return questions;
+  }
 }
